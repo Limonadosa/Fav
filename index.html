@@ -1,105 +1,173 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Minha galeria</title>
+    <title>Minha galeria</title>
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      max-width: 1000px;
-      margin: 30px auto;
-      padding: 0 20px;
-      background: #f2f2f2;
-    }
+    <style>
+      :root {
+        --fundo: #080b0a;
+        --cartao: #101713;
+        --cartao-hover: #16241b;
+        --verde: #39ff14;
+        --verde-suave: #9dff8c;
+        --texto: #eaffea;
+        --texto-fraco: #9caf9c;
+      }
 
-    h1, h2 {
-      text-align: center;
-    }
+      * {
+        box-sizing: border-box;
+      }
 
-    .galeria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
+      body {
+        margin: 0;
+        padding: 30px 20px;
+        background: var(--fundo);
+        color: var(--texto);
+        font-family: Arial, sans-serif;
+      }
 
-    .item {
-      background: white;
-      padding: 15px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px #0002;
-    }
+      h1 {
+        margin-bottom: 10px;
+        color: var(--verde);
+        text-align: center;
+        text-shadow: 0 0 10px #39ff1480;
+      }
 
-    .item img,
-    .item iframe {
-      display: block;
-      width: 100%;
-      border: 0;
-      border-radius: 5px;
-    }
+      h2 {
+        margin-top: 40px;
+        color: var(--verde-suave);
+        text-align: center;
+      }
 
-    .item iframe {
-      aspect-ratio: 16 / 9;
-    }
+      .galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 22px;
+        max-width: 1100px;
+        margin: 25px auto;
+      }
 
-    .item p {
-      margin-bottom: 0;
-      text-align: center;
-    }
-  </style>
-</head>
+      .item {
+        overflow: hidden;
+        padding: 15px;
+        background: var(--cartao);
+        border: 1px solid #39ff1440;
+        border-radius: 10px;
+        box-shadow: 0 0 12px #39ff1415;
+        transition: 0.2s ease;
+      }
 
-<body>
+      .item:hover {
+        background: var(--cartao-hover);
+        border-color: var(--verde);
+        box-shadow: 0 0 18px #39ff1460;
+        transform: translateY(-3px);
+      }
 
-  <h1>Minha galeria</h1>
+      .item img,
+      .item iframe {
+        display: block;
+        width: 100%;
+        border: 0;
+        border-radius: 6px;
+      }
 
-  <h2>Imagens e vídeos</h2>
+      .item img {
+        height: 230px;
+        object-fit: cover;
+      }
 
-  <div class="galeria">
+      .item iframe {
+        aspect-ratio: 16 / 9;
+      }
 
-    <!-- IMAGEM 1 -->
-    <div class="item">
-      <img
-        src="COLE_AQUI_O_LINK_DIRETO_DA_IMAGEM"
-        alt="Descrição da imagem">
+      .item p {
+        margin: 14px 0 0;
+        color: var(--texto-fraco);
+        text-align: center;
+      }
 
-      <p>Imagem 1</p>
+      .item strong {
+        color: var(--verde);
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Minha galeria</h1>
+
+    <h2>Imagens e vídeos</h2>
+
+    <div class="galeria">
+      <!-- IMAGEM 1 -->
+      <div class="item">
+        <img
+          src="COLE_AQUI_O_LINK_DIRETO_DA_IMAGEM"
+          alt="Descrição da imagem"
+        />
+
+        <p><strong>Imagem 1</strong></p>
+      </div>
+
+      <!-- IMAGEM 2 -->
+      <div class="item">
+        <img
+          src="COLE_AQUI_O_LINK_DIRETO_DA_IMAGEM"
+          alt="Descrição da imagem"
+        />
+
+        <p><strong>Imagem 2</strong></p>
+      </div>
+
+      <!-- VÍDEO 1 -->
+      <div class="item">
+        <iframe
+          src="https://ahrimp4.rule34.xxx//images/6236/1a67d960b02541b599695e136bb9d3bb.mp4?7096817"
+          title="Vídeo 1"
+          allowfullscreen
+        >
+        </iframe>
+
+        <p><strong>Vídeo 1</strong></p>
+      </div>
+
+      <!-- VÍDEO 2 -->
+      <div class="item">
+        <iframe
+          src="https://ahri2mp4.rule34.xxx//images/2496/0805c00b5424ea5636b2097920c42de6.mp4?14246988"
+          title="Vídeo 2"
+          allowfullscreen
+        >
+        </iframe>
+
+        <p><strong>Vídeo 2</strong></p>
+      </div>
+
+            <!-- VÍDEO 3 -->
+      <div class="item">
+        <iframe
+          src="https://ahri2mp4.rule34.xxx//images/2496/0805c00b5424ea5636b2097920c42de6.mp4?14246988"
+          title="Shoto (vtuber)"
+          allowfullscreen
+        >
+        </iframe>
+
+        <p><strong>Shoto (vtuber)</strong></p>
+      </div>
+
+               <!-- VÍDEO 4 -->
+      <div class="item">
+        <iframe
+          src="https://ahri2mp4.rule34.xxx//images/2496/0805c00b5424ea5636b2097920c42de6.mp4?14246988"
+          title="Vídeo 4"
+          allowfullscreen
+        >
+        </iframe>
+
+        <p><strong>Vídeo 4</strong></p>
     </div>
-
-    <!-- IMAGEM 2 -->
-    <div class="item">
-      <img
-        src="COLE_AQUI_O_LINK_DIRETO_DA_IMAGEM"
-        alt="Descrição da imagem">
-
-      <p>Imagem 2</p>
-    </div>
-
-    <!-- VÍDEO 1 -->
-    <div class="item">
-      <iframe
-        src="https://ahrimp4.rule34.xxx//images/6236/1a67d960b02541b599695e136bb9d3bb.mp4?7096817"
-        title="Vídeo 1"
-        allowfullscreen>
-      </iframe>
-
-      <p>Vídeo 1</p>
-    </div>
-
-    <!-- VÍDEO 2 -->
-    <div class="item">
-      <iframe
-        src="COLE_AQUI_O_SOURCE_DO_VIDEO"
-        title="Vídeo 2"
-        allowfullscreen>
-      </iframe>
-
-      <p>Vídeo 2</p>
-    </div>
-
-  </div>
-
-</body>
+  </body>
 </html>
